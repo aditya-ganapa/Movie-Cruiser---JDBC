@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<nav>
+	<p>
+		<a href="home.html" class="home-link">
+			Movie Cruiser
+			<img src="images/logo.jpg" alt="logo">
+		</a>
+		<a href="home.html" class="admin-logout-link">Logout</a>
+		<a href="ShowMovieListAdmin" class="admin-movies-link">Movies</a>
+	</p>
+</nav>
+<section>
+	<h2>Add Movie</h2>
+	<form name="addMovieForm" onsubmit="return validateAddMovieForm()" method="post" action="AddMovie">
+		<table>
+			<tr>
+				<td>
+					<label for="field-id">Id</label><br>
+					<input type="text" id="field-id" name="id">
+				</td>
+				<td colspan="3">
+					<label for="field-title">Name</label><br>
+					<input type="text" id="field-title" name="title">
+				</td>
+			</tr>
+			<tr>
+				<td>
+	    			<label for="field-boxOffice">Gross ($)</label><br>
+					<input type="text" id="field-boxOffice" name="boxOffice">
+				</td>
+				<td>
+					Active<br>
+					<input type="radio" id="field-acitve-yes" name="active" value="yes"><label for="field-active-yes"> Yes </label><input type="radio" name="active" id="field-active-no" value="no"><label for="field-active-no"> No</label>
+				</td>
+				<td>
+					<label for="field-dateOfLaunch">Date of Launch</label><br>
+					<input type="text" id="field-dateOfLaunch" name="dateOfLaunch">
+				</td>
+				<td>
+					<label for="field-genre">Genre</label><br>
+					<select id="field-genre" name="genre">
+						<option value=""></option>
+						<option value="Science Fiction">Science Fiction</option>
+						<option value="Superhero">Superhero</option>
+						<option value="Romance">Romance</option>
+						<option value="Comedy">Comedy</option>
+						<option value="Adventure">Adventure</option>
+						<option value="Thriller">Thriller</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="field-hasTeaser" name="hasTeaser" value="yes"><label for="field-hasTeaser"> Has Teaser</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="submit" value="Add">
+				</td>
+			</tr>
+		</table>
+	</form>
+</section>
+<footer>
+	<p>Copyright &copy; 2019</p>
+</footer>
+</body>
+</html>
